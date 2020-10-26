@@ -34,13 +34,14 @@ public class CarApp2 {
 			}
 			try {
 				printChoice(choice);
+
+				buyCar = Validator.getYesNo(scnr, "Would you like to buy this car? ");
+				if (buyCar) {
+					carList.remove(choice);
+					System.out.println("Excellent! Our finance dept. will be in touch.");
+				}
 			} catch (IndexOutOfBoundsException e) {
 				System.out.println("Please enter a correct choice option");
-			}
-			buyCar = Validator.getYesNo(scnr, "Would you like to buy this car? ");
-			if (buyCar) {
-				carList.remove(choice);
-				System.out.println("Excellent! Our finance dept. will be in touch.");
 			}
 
 		}
