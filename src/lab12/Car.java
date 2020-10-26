@@ -6,6 +6,7 @@ public class Car {
 	private String model;
 	private int year;
 	private double price;
+	private Dealership dealership;
 	
 	public Car() {
 		
@@ -15,6 +16,13 @@ public class Car {
 		this.model = model;
 		this.year = year;
 		this.price = price;
+	}
+	public Car(String make, String model, int year, double price, Dealership dealership) {
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		this.price = price;
+		this.dealership = dealership;
 	}
 	public String getMake() {
 		return make;
@@ -39,6 +47,12 @@ public class Car {
 	}
 	public void setPrice(double price) {
 		this.price = price;
+	}	
+	public Dealership getDealership() {
+		return dealership;
+	}
+	public void setDealership(Dealership dealership) {
+		this.dealership = dealership;
 	}
 	@Override
 	public String toString() {
