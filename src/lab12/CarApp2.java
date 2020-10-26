@@ -51,7 +51,7 @@ public class CarApp2 {
 	public static void printList() {
 		int count = 1;
 		for (Car car : carList) {
-			System.out.printf("%-1s %-10s %-20s %-10s $%1s", count + ") ", car.getMake(), car.getModel(), car.getYear(),
+			System.out.printf("%-1s %-10s %-20s %-10s $%.2f", count + ") ", car.getMake(), car.getModel(), car.getYear(),
 					car.getPrice());
 			if (car instanceof UsedCar) {
 				System.out.print(" (Used) " + ((UsedCar) car).getMileage() + " miles");
@@ -64,7 +64,7 @@ public class CarApp2 {
 
 	public static void printChoice(int choice) {
 		Car car = carList.get(choice - 1);
-		System.out.printf("%-10s %-20s %-10s $%1s", car.getMake(), car.getModel(), car.getYear(), car.getPrice());
+		System.out.printf("%-10s %-20s %-10s $%.2f", car.getMake(), car.getModel(), car.getYear(), car.getPrice());
 		if (car instanceof UsedCar) {
 			System.out.print(" (Used) " + ((UsedCar) car).getMileage() + " miles");
 		}
