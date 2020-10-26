@@ -37,7 +37,7 @@ public class CarApp2 {
 
 				buyCar = Validator.getYesNo(scnr, "Would you like to buy this car? ");
 				if (buyCar) {
-					carList.remove(choice);
+					carList.remove(choice -1);
 					System.out.println("Excellent! Our finance dept. will be in touch.");
 				}
 			} catch (IndexOutOfBoundsException e) {
